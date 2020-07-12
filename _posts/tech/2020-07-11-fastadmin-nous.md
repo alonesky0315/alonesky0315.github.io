@@ -227,7 +227,7 @@ var Controller = {
 }
 ```
 
-```js Controller   
+```php Controller   
 public function index(){
     //设置过滤方法
     $this->request->filter(['strip_tags']);
@@ -320,7 +320,7 @@ public function edit($ids = null) {
     return parent::modify($ids,'edit');
 }
 ```  
-``` js Model   
+``` php Model   
 // 追加属性
 protected $append = [
     'status_text'
