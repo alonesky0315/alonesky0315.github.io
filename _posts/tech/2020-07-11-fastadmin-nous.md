@@ -228,7 +228,6 @@ var Controller = {
     },
 }
 ```
-
 ```php Controller
 public function index(){
     //设置过滤方法
