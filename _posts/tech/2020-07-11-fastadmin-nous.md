@@ -8,7 +8,7 @@ description: fastadmin基础教程
 ---
 #### fastadmin
 一、关联表
-```js   
+```js
 // 初始化表格
 var Controller = {
     index: function () {
