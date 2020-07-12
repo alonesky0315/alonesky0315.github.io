@@ -8,7 +8,7 @@ description: fastadmin基础教程
 ---
 #### fastadmin
 一、关联表
-``` js   
+```js   
 // 初始化表格
 var Controller = {
     index: function () {
@@ -227,8 +227,9 @@ var Controller = {
         });
     },
 }
-```    
-``` php Controller    
+```
+
+``` Controller
 public function index(){
     //设置过滤方法
     $this->request->filter(['strip_tags']);
@@ -320,8 +321,8 @@ public function edit($ids = null) {
     }
     return parent::modify($ids,'edit');
 }
-```   
-``` php Model    
+```  
+```Model
 // 追加属性
 protected $append = [
     'status_text'
@@ -346,20 +347,18 @@ protected function setEndtimeAttr($value)
     return $value && !is_numeric($value) ? strtotime($value) : $value;
 }
 
-```    
-``` html   
+```
+``` html
 //渲染select selectpage
 //data-field:name要查询字段，默认name|data-params:自定义参数|data-page-size:分页条数|data-source:ajax地址--仅适用于下拉
 //data-live-search:搜索|data-rule:规则
 <input data-params='{"custom[pid]":"0"}' data-rule="required" data-page-size="7" data-source="mall/area/selectpage" 
 data-field="sname" data-live-search="true" class="selectpage" />
-<select id="building_code" data-rule="required" class="form-control" name="row[building_code]" 
-data-live-search="true"></select>
+<select id="building_code" data-rule="required" class="form-control" name="row[building_code]" data-live-search="true"></select>
                    
 //时间 data-date-forma:时间格式|data-use-current:是否使用当前
 
-<input class="datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" 
-value="{$row.date|date="Y-m-d H:i:s",###}" />
+<input class="datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" value="{$row.date|date="Y-m-d H:i:s",###}" />
 
 //根据字段改变子字段
 <div class="form-group">
@@ -368,16 +367,14 @@ value="{$row.date|date="Y-m-d H:i:s",###}" />
         <div class="radio">
             <label for="row[integral]-0"><input id="row[integral]-0" name="row[integral]" type="radio" value="0" 
             checked /> 否</label>
-            <label for="row[integral]-1"><input id="row[integral]-1" name="row[integral]" 
-            type="radio" value="1" /> 是</label>
+            <label for="row[integral]-1"><input id="row[integral]-1" name="row[integral]" type="radio" value="1" /> 是</label>
         </div>
     </div>
 </div>
 <div class="form-group intp intp-0">
     <label class="control-label col-xs-12 col-sm-2">{:__('Integralprice')}:</label>
     <div class="col-xs-12 col-sm-8">
-        <input id="c-integralprice" data-rule="required" class="form-control" name="row[integralprice]" 
-        type="text" value="">
+        <input id="c-integralprice" data-rule="required" class="form-control" name="row[integralprice]" type="text" value="">
     </div>
 </div>
 //城市下拉
@@ -416,4 +413,4 @@ value="{$row.date|date="Y-m-d H:i:s",###}" />
         {:build_radios('row[pay_status]', ['0'=>__('Paystatus 0'),'1'=>__('Paystatus 1')],$row['pay_status'])}
     </div>
 </div>
-```   
+```
