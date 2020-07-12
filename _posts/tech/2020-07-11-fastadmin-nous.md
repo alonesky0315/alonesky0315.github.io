@@ -6,8 +6,6 @@ keywords: fastadmin,基础教程
 tags: 技术,fastadmin,基础教程
 description: fastadmin基础教程
 ---
-#### fastadmin
-一、关联表
 ```js   
 // 初始化表格
 var Controller = {
@@ -229,7 +227,7 @@ var Controller = {
 }
 ```
 
-``` Controller
+```php Controller   
 public function index(){
     //设置过滤方法
     $this->request->filter(['strip_tags']);
@@ -322,7 +320,7 @@ public function edit($ids = null) {
     return parent::modify($ids,'edit');
 }
 ```  
-```Model
+```php Model   
 // 追加属性
 protected $append = [
     'status_text'
@@ -348,7 +346,7 @@ protected function setEndtimeAttr($value)
 }
 
 ```
-``` html
+```html   
 //渲染select selectpage
 //data-field:name要查询字段，默认name|data-params:自定义参数|data-page-size:分页条数|data-source:ajax地址--仅适用于下拉
 //data-live-search:搜索|data-rule:规则
