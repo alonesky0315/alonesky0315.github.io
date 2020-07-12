@@ -1,0 +1,52 @@
+# Site settings
+title: 日出的幻景
+email: alonesky0315@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  日出的幻景
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: https://alonesky0315.github.io # the base hostname & protocol for your site
+rss_url: /feed.xml
+author: JunjunChen
+
+# Sidebar filter
+# Choose 'tag' or 'category' as filter in sidebar.
+filter: 'category'
+recent_num: 20
+
+# Social account
+twitter: 
+weibo: 318861230
+github: alonesky0315
+instagram: 
+linkedin: 
+
+# avatar and Favicon
+avatar: /assets/img/avatar.jpg
+favicon: /assets/img/favicon.ico
+music_mp3: /assets/file/music.mp3
+music_ogg: /assets/file/music.ogg
+
+# disqus config
+disqus:
+  shortname: 
+
+# google analytics config
+ga:
+  id: 
+  url: 
+
+# Build settings
+permalink: /:year/:month/:day/:title.html
+markdown: kramdown
+highlighter: rouge
+mathjax: disabled
+sass:
+  style: compressed
+
+# Jekyll Plugin
+# https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
