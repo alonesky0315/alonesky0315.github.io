@@ -13,7 +13,8 @@ description: mysql导入数据时常见错误
 案例： 
     有时导入mysql会提示如下错误： 
 ```
-1064 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USING BTREE
+1064 - You have an error in your SQL syntax; check the manual that corresponds to your 
+MySQL server version for the right syntax to use near 'USING BTREE
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8' at line 7　　
 ```
 解决办法：   
