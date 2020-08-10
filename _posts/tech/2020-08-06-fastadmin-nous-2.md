@@ -96,7 +96,7 @@ api: {
 }
 ```    
 - 追加搜索条件  
-```php
+``` php
 $this->request->filter(['strip_tags']);
 if (filter_var($ids, FILTER_VALIDATE_INT)) {
     $append =[['fid'=>$ids]];
