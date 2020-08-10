@@ -7,7 +7,7 @@ tags: 技术,fastadmin,基础教程
 description: fastadmin基础教程（二）
 ---
 
-- 自定义按钮（老版）
+### 自定义按钮（老版）
 
 ``` js
 {
@@ -97,7 +97,7 @@ api: {
 }
 ```    
 
-- 追加搜索条件  
+### 追加搜索条件  
 
 ``` php
 $this->request->filter(['strip_tags']);
@@ -111,7 +111,7 @@ list($where, $sort, $order, $offset, $limit, $orderParams) = $this->buildparams(
 filter_var() 函数通过指定的过滤器过滤一个变量
 ```   
 
-- 公共搜索
+### 公共搜索
    
 ```html   
 {include file="expenses/index/common_search" /}
@@ -205,7 +205,7 @@ $("#common_search").bind("click",function () {
 Controller.api.bindevent();
 ``` 
   
-- 树节点 附件：图四
+### 树节点 附件：图四
 
 ```js
 define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'jstree'], function ($, undefined, Backend, Table, Form, undefined) {
@@ -318,7 +318,7 @@ public static function getTreeList($selected = []){
 }
 ```
 
-- 移除排序 
+### 移除排序 
   
 ```js
 // 初始化表格参数配置
@@ -340,7 +340,7 @@ Table.api.init({
 });
 ```
 
-- 上传图片绑定事件
+### 上传图片绑定事件
 
 ```js
 // 给上传按钮添加上传成功事件
@@ -358,7 +358,7 @@ Table.api.init({
     });
 ```
 
-- 双击事件 
+### 双击事件 
 
 ```js
 //双击重新加载页面
@@ -403,7 +403,7 @@ table.bootstrapTable({
 Table.api.bindevent(table);
 ```
 
-- 附件
+### 附件
 
 图一：![图一](https://ae01.alicdn.com/kf/H4adf7bfba1254f1bb3a16d087048a854K.jpg)     
 图二：![图二](https://ae01.alicdn.com/kf/H8b034a2d6f93484188dfc52dc21fd4c7I.jpg)    

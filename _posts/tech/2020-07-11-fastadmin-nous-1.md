@@ -6,6 +6,7 @@ keywords: fastadmin,基础教程
 tags: 技术,fastadmin,基础教程
 description: fastadmin基础教程
 ---
+### JS
 ```js   
 // 初始化表格
 var Controller = {
@@ -227,6 +228,8 @@ var Controller = {
 }
 ```
 
+### PHP Controller
+
 ```php Controller   
 public function index(){
     //设置过滤方法
@@ -346,6 +349,9 @@ protected function setEndtimeAttr($value)
 }
 
 ```
+
+### HTML
+
 ```html   
 //渲染select selectpage
 //data-field:name要查询字段，默认name|data-params:自定义参数|data-page-size:分页条数|data-source:ajax地址--仅适用于下拉
