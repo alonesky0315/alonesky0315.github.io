@@ -24,6 +24,9 @@ layout: null
         {% for cat in post.categories %}
         <category>{{ cat | xml_escape }}</category>
         {% endfor %}
+        <audio autoplay loop>
+        <source src="{{ post.music_mp3 }}" />
+        </audio>
       </item>
     {% endfor %}
   </channel>
