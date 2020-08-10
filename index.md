@@ -5,6 +5,7 @@ category: 关于
 tags: About
 keywords: 日出的幻景,关于我
 description: 日出的幻景
+music_mp3:/assets/file/music.mp3
 ---
 ## 关于我
 
