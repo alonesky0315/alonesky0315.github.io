@@ -15,5 +15,10 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   {% seo %}
   {% feed_meta %}
+  {% if page.music_mp3 %}7878
+  <audio autoplay loop>
+    <source src="{{ page.music_mp3 }}" />
+  </audio>
+  {% endif %}
   <script src="{{ "/assets/js/prefixfree.js" | prepend: site.baseurl }}"></script>
 </head>
