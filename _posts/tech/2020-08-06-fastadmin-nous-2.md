@@ -107,7 +107,7 @@ list($where, $sort, $order, $offset, $limit, $orderParams) = $this->buildparams(
 [filter_var PHP 过滤器](https://www.runoob.com/php/php-ref-filter.html)  
 filter_var() 函数通过指定的过滤器过滤一个变量
 ```
-- 公共搜索
+- 公共搜索   
 ```html
 {include file="expenses/index/common_search" /}
 <div class="commonsearch-table">
@@ -198,7 +198,7 @@ $("#common_search").bind("click",function () {
     });
 });
 Controller.api.bindevent();
-```
+```   
 - 树节点 附件：图四
 ```js
 define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'jstree'], function ($, undefined, Backend, Table, Form, undefined) {
@@ -310,7 +310,7 @@ public static function getTreeList($selected = []){
     return $nodeList;
 }
 ```
-- 移除排序
+- 移除排序   
 ```js
 // 初始化表格参数配置
 Table.api.init({
