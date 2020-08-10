@@ -230,7 +230,7 @@ var Controller = {
 
 ### PHP Controller
 
-```php Controller   
+``` php Controller   
 public function index(){
     //设置过滤方法
     $this->request->filter(['strip_tags']);
