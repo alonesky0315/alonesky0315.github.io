@@ -107,7 +107,8 @@ list($where, $sort, $order, $offset, $limit, $orderParams) = $this->buildparams(
 [filter_var PHP 过滤器](https://www.runoob.com/php/php-ref-filter.html)  
 filter_var() 函数通过指定的过滤器过滤一个变量
 ```   
-- 公共搜索   
+- 公共搜索
+   
 ```html   
 {include file="expenses/index/common_search" /}
 <div class="commonsearch-table">
