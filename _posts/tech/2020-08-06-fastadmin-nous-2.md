@@ -7,7 +7,7 @@ tags: 技术,fastadmin,基础教程
 description: fastadmin基础教程（二）
 ---
 
-> 自定义按钮（老版）
+#### 自定义按钮（老版）
 ``` js
 {
     field: 'refundMontyis',
