@@ -8,6 +8,7 @@ description: fastadmin基础教程（二）
 ---
 
 - 自定义按钮（老版）
+
 ``` js
 {
     field: 'refundMontyis',
@@ -95,7 +96,9 @@ api: {
     }
 }
 ```    
+
 - 追加搜索条件  
+
 ``` php
 $this->request->filter(['strip_tags']);
 if (filter_var($ids, FILTER_VALIDATE_INT)) {
@@ -107,6 +110,7 @@ list($where, $sort, $order, $offset, $limit, $orderParams) = $this->buildparams(
 [filter_var PHP 过滤器](https://www.runoob.com/php/php-ref-filter.html)  
 filter_var() 函数通过指定的过滤器过滤一个变量
 ```   
+
 - 公共搜索
    
 ```html   
@@ -199,8 +203,10 @@ $("#common_search").bind("click",function () {
     });
 });
 Controller.api.bindevent();
-```   
+``` 
+  
 - 树节点 附件：图四
+
 ```js
 define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'jstree'], function ($, undefined, Backend, Table, Form, undefined) {
     //读取选中的条目
@@ -311,7 +317,9 @@ public static function getTreeList($selected = []){
     return $nodeList;
 }
 ```
-- 移除排序   
+
+- 移除排序 
+  
 ```js
 // 初始化表格参数配置
 Table.api.init({
@@ -331,7 +339,9 @@ Table.api.init({
     }
 });
 ```
+
 - 上传图片绑定事件
+
 ```js
 // 给上传按钮添加上传成功事件
     $("#plupload-avatar").data("upload-success", function (data) {
@@ -347,7 +357,9 @@ Table.api.init({
         return true;
     });
 ```
+
 - 双击事件 
+
 ```js
 //双击重新加载页面
 $(document).on("dblclick", ".sidebar-menu li > a", function (e) {
@@ -357,7 +369,9 @@ $(document).on("dblclick", ".sidebar-menu li > a", function (e) {
     e.stopPropagation();
 });
 ```
+
 - 无刷新 加载 更新 附件：图五
+
 ```js
 defind 添加 'editable'
 var table = $("#table");
