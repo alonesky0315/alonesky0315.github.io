@@ -10,6 +10,11 @@ description: fastadmin基础教程（二）
 ### 自定义按钮（老版）
 
 ``` js
+var table = $("#table");
+//自定义按钮弹出的页面设置
+table.on('post-body.bs.table', function (e, settings, json, xhr) {
+    $(".btn-expenses_house").data("area", ["100%", "100%"]);
+});
 {
     field: 'refundMontyis',
     title: __('退款'),
@@ -71,26 +76,31 @@ api: {
             var html = [];
             var url, classname, icon, text, title, extend;
             //判断按钮是否显示
-            if(row.refundStatus==1){
-                $.each(buttons, function (i, j) {
-                    var attr = table.data("buttons-" + j.name);
-                    if (typeof attr === 'undefined' || attr) {
-                        url = j.url ? j.url : '';
-                        if (url.indexOf("{ids}") === -1) {
-                            url = url ? url + (url.match(/(\?|&)+/) ? "&ids=" : "/ids/") + row[options.pk] : '';
-                        }
-                        url = Table.api.replaceurl(url, value, row, table);
-                        url = url ? Fast.api.fixurl(url) : 'javascript:;';
-                        classname = j.classname ? j.classname : 'btn-primary btn-' + name + 'one';
-                        icon = j.icon ? j.icon : '';
-                        text = j.text ? j.text : '';
-                        title = j.title ? j.title : text;
-                        extend = j.extend ? j.extend : '';
+            $.each(buttons, function (i, j) {
+                var attr = table.data("buttons-" + j.name);
+                if (typeof attr === 'undefined' || attr) {
+                    url = j.url ? j.url : '';
+                    if (url.indexOf("{ids}") === -1) {
+                        url = url ? url + (url.match(/(\?|&)+/) ? "&ids=" : "/ids/") + row[options.pk] : '';
+                    }
+                    url = Table.api.replaceurl(url, value, row, table);
+                    url = url ? Fast.api.fixurl(url) : 'javascript:;';
+                    classname = j.classname ? j.classname : 'btn-primary btn-' + name + 'one';
+                    icon = j.icon ? j.icon : '';
+                    text = j.text ? j.text : '';
+                    title = j.title ? j.title : text;
+                    extend = j.extend ? j.extend : '';
+                    if(j.name=='call'&&row.refundStatus!=1){
                         html.push('<a href="' + url + '" class="' + classname + '" ' + extend + ' title="' + title
                             + '"><i class="' + icon + '"></i>' + (text ? ' ' + text : '') + '</a>');
+                    }else if(j.name=='all_call'&&row.refundStatus!=1){
+                        html.push('<a href="' + url + '" class="' + classname + '" ' + extend + ' title="' + title
+                            + '"><i class="' + icon + '"></i>' + (text ? ' ' + text : '') + '</a>');
+                    }else{
+                        html.push('');
                     }
-                });
-            }
+                }
+            });
             return html.join(' ');
         },
     }
@@ -156,6 +166,7 @@ table.bootstrapTable({
     showToggle:false, //去除切换功能，移除或true为打开
     showColumns:false, //去除列功能，移除或true为打开
     showExport:false, //去除导出数据功能，移除或true为打开
+    exportTypes: ['csv','excel'],//导出类型
     showJumpto:false, //分页插件，实现自定义跳转页面 [showJumpto](https://ask.fastadmin.net/article/12294.html)  
     pageList: [10, 20, 50, 'All'],//每页条数
     //重组排序字段
@@ -179,6 +190,12 @@ table.bootstrapTable({
             {field: 'id', title: __('Id'),sortable:true},
             //筛选
             {field: 'goods_id', title: __('Goods_id'), operate: "in", formatter: Table.api.formatter.search},
+            {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', 
+                formatter: Table.api.formatter.datetime,datetimeFormat:"Y-M-D"},
+            {field: 'status', title: __('Status'), operate: false, formatter: function (value) {
+                var status = (value == '1') ? 'normal' : 'hidden'
+                return Table.api.formatter.status(status);
+            }},
             {field: 'project', title: __('Project'), formatter: function (project) {
                 if(project) {
                     return project.name;
@@ -375,7 +392,6 @@ $(document).on("dblclick", ".sidebar-menu li > a", function (e) {
 ```js
 defind 添加 'editable'
 var table = $("#table");
-
 //设置字段
 var columns = [
     {checkbox: true},

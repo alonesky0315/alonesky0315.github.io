@@ -66,6 +66,8 @@ var Controller = {
                         //老版本 添加样式 日期：datepicker|日期+时间：datetimepicker|时间：timepicker
                         //新版本 添加样式 datetimerange 格式时间：datetimeFormat:"YYYY-MM-DD",
                         addclass:'datetimepicker', 
+                        //格式化时间
+                        data: 'data-date-format="YYYY-MM-DD HH:mm:ss"',
                         //老版本 日期：Table.api.formatter.date|时间：Table.api.formatter.datetime
                         //新版本 日期加时间 Table.api.formatter.datetime
                         formatter: Table.api.formatter.datetime
@@ -355,8 +357,9 @@ protected function setEndtimeAttr($value)
 ```html   
 //渲染select selectpage
 //data-field:name要查询字段，默认name|data-params:自定义参数|data-page-size:分页条数|data-source:ajax地址--仅适用于下拉
+//data-primary-key:key主键
 //data-live-search:搜索|data-rule:规则
-<input data-params='{"custom[pid]":"0"}' data-rule="required" data-page-size="7" data-source="mall/area/selectpage" 
+<input data-params='{"custom[pid]":"0"}' data-primary-key="fid" data-rule="required" data-page-size="7" data-source="mall/area/selectpage" 
 data-field="sname" data-live-search="true" class="selectpage" />
 <select id="building_code" data-rule="required" class="form-control" name="row[building_code]" data-live-search="true"></select>
                    
