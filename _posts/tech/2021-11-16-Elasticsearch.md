@@ -117,7 +117,7 @@ echo '日出的幻景' > /etc/elasticsearch/analysis-ik/keywords.dic
 composer require elasticsearch/elasticsearch ~6.5.0
 ```
 #### Elasticsearch类
-```php
+```
 namespace app\common\model;
 
 use Elasticsearch\ClientBuilder;
