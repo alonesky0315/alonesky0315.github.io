@@ -119,10 +119,8 @@ composer require elasticsearch/elasticsearch ~6.5.0
 #### Elasticsearch类
 ```
 namespace app\common\model;
-
 use Elasticsearch\ClientBuilder;
 use think\Model;
-
 /**
  * Class Elasticsearch
  * @package app\common\model
@@ -145,20 +143,17 @@ class Elasticsearch extends Model
      * */
     protected $client;
     protected $params;
-
     protected function initialize()
     {
         $this->params = [
             'index' => 'guoxin',
             'type' => 'goods'
         ];
-        $this->client = ClientBuilder::create()->setHosts(
-            [
-                'host' => '127.0.0.1',
-                'port' => '9200',
-            ])->build();
+        $this->client = ClientBuilder::create()->setHosts([
+			'host' => '127.0.0.1',
+			'port' => '9200',
+		])->build();
     }
-
     /**
      * 生成索引
      * @param int $goods_id
@@ -182,7 +177,6 @@ class Elasticsearch extends Model
         ]);
         return $this->client->index($params);
     }
-
     /**
      * 生成索引
      * @param int $goods_id
@@ -212,7 +206,6 @@ class Elasticsearch extends Model
         ]);
         return $this->client->index($params);
     }
-
     /**
      * 获取索引
      * @param int $goods_id
@@ -229,7 +222,6 @@ class Elasticsearch extends Model
         // $response = $this->client->getSource($params);
         return $response;
     }
-
     /*
       * 设置索引
       * return
@@ -247,7 +239,6 @@ class Elasticsearch extends Model
         ];
         $this->client->indices()->create($params);
     }
-
     /**
      * 删除索引
      * @param int $goods_id
@@ -262,7 +253,6 @@ class Elasticsearch extends Model
         $response = $this->client->delete($params);
         return $response;
     }
-
     /**
      * 更新索引
      * @param int $goods_id
@@ -293,7 +283,6 @@ class Elasticsearch extends Model
         $response = $this->client->update($params);
         return $response;
     }
-
     /**
      * 搜索某一字段
      * @param string $title
@@ -347,7 +336,6 @@ class Elasticsearch extends Model
         return array_slice($response['hits']['hits'], $start, $size);
         // return $response;
     }
-
     /**
      * @return mixed
      */
@@ -364,7 +352,6 @@ class Elasticsearch extends Model
         $response = $this->client->indices()->getMapping($params);  // 获取mapping信息
         return $response;
     }
-
     /**
      * 搜索多个字段
      * query bool must 是 and 查询
