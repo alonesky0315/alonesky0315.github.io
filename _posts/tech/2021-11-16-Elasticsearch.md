@@ -415,7 +415,9 @@ $elasticsearchModel->deleteIndex($goods_id);
 $elasticsearchModel->insertIndexMore($goods_id, $goods_info['name'], $goods_info['maidian'], $goods_info['content'], $status);
 ```
 #### 删除索引
+```
 $elasticsearchModel->deleteIndex($goods_id);
+```
 #### 使用搜索
 ```
 $elasticsearchModel = new Elasticsearch();
@@ -437,6 +439,7 @@ $goods_list = db('goods')
     ->orderRaw($order)
     ->select();
 ```
+
 参考链接：[http://blog.huati365.com/7a46ca39c9ab3b8a](http://blog.huati365.com/7a46ca39c9ab3b8a)
 
 原文链接：[https://blog.alonesky.com/thinkphpelasticsearch-5czap](https://blog.alonesky.com/thinkphpelasticsearch-5czap)
