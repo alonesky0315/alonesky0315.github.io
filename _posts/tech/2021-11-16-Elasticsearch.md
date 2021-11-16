@@ -68,7 +68,6 @@ netstat -plntu
 2、启动不起来可能是内存不够修改配置
 ```
 vi /etc/elasticsearch/jvm.options
-
 ```
 3、重启Elasticsearch服务
 ```
