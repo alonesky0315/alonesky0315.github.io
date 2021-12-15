@@ -1,12 +1,7 @@
-- name: Link
-  image: https://atlinker.cn/avatar/avatar.png
-  url: https://atlinker.cn/
-  describe: Link's Blog
-
-- name: Daily
-  image: https://atlinker.cn/avatar/default.png
-  url: https：//linker.ml/daily/
-  describe: Daily
+- name: 日出的幻景
+  image: https://blog.alonesky.com/images/logo.jpg
+  url: https://blog.alonesky.com/
+  describe: 日出的幻景
 
 # - name: Links Name
 #  image: http://example.com/img.png
