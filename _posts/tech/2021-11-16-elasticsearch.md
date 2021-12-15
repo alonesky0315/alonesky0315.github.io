@@ -9,6 +9,7 @@ description: ThinkPHP使用Elasticsearch分词搜索
 
 > Elasticsearch使用Java环境所以需要先搭建Java环境   
 > 环境CentOS 7.6、Java10、Elasticsearch
+
 #### 安装 Java环境
 1、获取RPM安装包    
 ```

@@ -6,6 +6,9 @@ keywords: fastadmin,基础教程
 tags: 技术 fastadmin 基础教程
 description: fastadmin基础教程
 ---
+
+> fastadmin基础教程（一）
+
 ### JS
 ```js   
 // 初始化表格

@@ -6,7 +6,8 @@ keywords: 技术
 tags: 技术 mysql 导入数据
 description: mysql导入数据时常见错误
 ---
-#### mysql导入数据时常见错误
+> mysql导入数据时常见错误
+
 一、提示 USING BTREE 错误解决办法   
 错误原因：    
     mysql 5.1和mysql 5.0在处理到索引语句时有所区别。   

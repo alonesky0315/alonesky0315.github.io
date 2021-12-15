@@ -7,7 +7,10 @@ tags: Fastadmin 基础教程 上传图片
 description: Fastadmin上传图片到COS
 ---
 
+> Fastadmin上传图片到COS
+
 #### 安装腾讯云COS扩展
+
 ```
 composer require qcloud/cos-sdk-v5 ~2.* 
 ```
