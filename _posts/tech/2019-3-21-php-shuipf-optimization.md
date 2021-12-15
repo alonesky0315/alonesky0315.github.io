@@ -6,6 +6,8 @@ keywords: 水平方,随机文章,关联关键词
 tags: PHP shuipf
 description: 水平方随机文章、关联关键词
 ---
+### 水平方随机文章、关联关键词
+
 ### 一、关键词文章
 1.修改文件：/shuipf/Application/Content/TagLib/Content.class.php
 
