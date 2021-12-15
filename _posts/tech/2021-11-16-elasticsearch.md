@@ -1,9 +1,9 @@
 ---
 layout: post
 title: ThinkPHP使用Elasticsearch分词搜索
-category: 技术
+category: tech
 keywords: ThinkPHP,基础教程,Elasticsearch,分词搜索
-tags: ThinkPHP,基础教程,Elasticsearch,分词搜索
+tags: ThinkPHP 基础教程 Elasticsearch 分词搜索
 description: ThinkPHP使用Elasticsearch分词搜索
 ---
 

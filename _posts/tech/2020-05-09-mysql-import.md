@@ -1,9 +1,9 @@
 ---
 layout: post
 title: mysql导入数据时常见错误
-category: 技术
+category: tech
 keywords: 技术
-tags: 技术,mysql,导入数据
+tags: 技术 mysql 导入数据
 description: mysql导入数据时常见错误
 ---
 #### mysql导入数据时常见错误

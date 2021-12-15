@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Fastadmin上传图片到COS
-category: 技术
+category: tech
 keywords: Fastadmin,基础教程,上传图片
-tags: Fastadmin,基础教程,上传图片
+tags: Fastadmin 基础教程 上传图片
 description: Fastadmin上传图片到COS
 ---
 

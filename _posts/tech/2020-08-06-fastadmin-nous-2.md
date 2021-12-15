@@ -1,9 +1,9 @@
 ---
 layout: post
 title: fastadmin基础教程（二）
-category: 技术
+category: tech
 keywords: fastadmin,基础教程
-tags: 技术,fastadmin,基础教程
+tags: 技术 fastadmin 基础教程
 description: fastadmin基础教程（二）
 ---
 
