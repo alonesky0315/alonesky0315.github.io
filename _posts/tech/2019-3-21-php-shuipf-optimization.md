@@ -3,7 +3,7 @@ layout: post
 title: 水平方随机文章、关联关键词
 category: 技术
 keywords: 水平方,随机文章,关联关键词
-tags: PHP,shuipf
+tags: PHP shuipf
 description: 水平方随机文章、关联关键词
 ---
 ### 一、关键词文章
