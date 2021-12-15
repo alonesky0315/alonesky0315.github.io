@@ -1,38 +1,45 @@
-# Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+title: Link #博客标题
+description: Just 4 Fun. #博客描述
+keywords: blog,css,html,php #博客关键字
+author: "Link"
 
+#title hide and show
+hide: (つェ⊂)我藏好啦
+show: ´∇｀ 呀被发现啦~ 
 
-# Sidebar filter
-# Choose 'tag' or 'category' as filter in sidebar.
-filter: 'tag'
+baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+url: "hydrogen.atlinker.cn" # change this to the base hostname & protocol for your site
+buildtime: "1514736000" #博客建立时的时间戳 可进入https://tool.lu/timestamp/将博客建立时的日期转换成时间戳
+           #The timestamp at the time of blog establishment can be entered at https://tool.lu/timestamp/to convert the date at the time of blog establishment into a timestamp.
 
+PJAX: true #启用PJAX，会与评论系统冲突（如不用评论系统建议开启）
 
-# Social account
-# twitter:  username
-# weibo:    ID
-# github:   username
-# codepen:  username
-# dribbble: username
+paginate: 8 #同时显示的最大文章数，超过自动分页
+paginate_path: "page:num"
 
+background: https://api.dujin.org/bing/1920.php
+theme_color: 546E7A
 
-# Comment
-# disqus_shortname: discussion_shortname
+# hydrogen-blog date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+hydrogen-blog:
+  date_format: "%b %-d, %Y"
 
+#MathJax switch
+MathJax: false
 
-# Google Analytics
-# google_analytics: tracking_ID
+#install emoji
+plugins:
+  - jemoji
 
-
-# Build settings
-markdown: kramdown
-sass:
-  style: compressed
-gems:
-  - jekyll-sitemap
+# social account
+image:
+twitter:
+  username:
+#  site:
+facebook:
+  #publisher: null
+  #profile_id: null
+  app_id: null
+  #authors: null
+#  admins:

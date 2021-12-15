@@ -1,42 +1,104 @@
-# 3-Jekyll Theme
+# Hydrogen
+轻盈、干净
 
-新版 3-Jekyll，当前完成度 80%，预览请访问 [http://peiwen.lu](http://peiwen.lu)，[Github repo](https://github.com/P233/P233.github.io)。
+跟随她的脚步，开始你的博客之旅
 
-旧版请在 [https://github.com/P233/3-Jekyll/releases](https://github.com/P233/3-Jekyll/releases) 下载。
+>厌倦了无止境的加载以及繁杂的页面内容？那您很幸运，因为您发现了Hydrogen
+><br>我们避免繁杂 使用轻量化的模块来渲染在您屏幕上展示出来的一切 
+><br>当您使用过后就知道，她带给你的不仅仅只有简洁极速的阅读体验...
 
+语言：简体中文 | [English](README-en.md)
 
-## 针对旧版的改进
+![hydrogen](/theme/logo-h.svg)
 
-* 侧边栏使用 Tag 或 Category 做为文章分类，默认 Tag。
-* 自动生成侧边栏分类标签，基本不需要修改模板文件。但标签顺序由 Jekyll 根据时间顺序生成，需要手动调整顺序只能修改 `_includes/sidebar.html`，格式是 `<li class="sidebar-tag" data-filter="TAG">TAG</li>`，替换 `TAG`，大小写敏感。
-* 更加全面的 Sass 变量，方便个性化主题样式。
-* 暂定取消文章的标题目录。
-* 取消了嵌入 Codepen。
+~~点点~~Star~~来一个好吗！秋梨膏！！~~
 
+# #快速开始
 
-## TODO
+![hydrogen](/theme/a-h.png)
 
-* 搜索功能
-* Webkit 换页动画
-* 改进文章筛选动画
-* <del>集成 Google Analytics</del>
-* 文章时间，Category，Tag 归档页面
-* Favicon
-* Mobile touch swipe
+## #准备
 
-其他建议欢迎[提交 issue](https://github.com/P233/3-Jekyll/issues/new)
+打开主题根目录下的`_config.yml`
 
+根据需求修改以下选项：
 
-## 使用
+`title` : 更改你的博客名字
 
-### 设置 `_config.yml`
+`description` : 更改你的博客描述
 
-`_config.yml` 除基本的站点设置外，新加入了社交链接与评论设置。将需要添加的社交帐号填入对应设置，并取消注释，会在头像下方增加一条社交帐号的链接。支持 Twitter, Weibo, Github, Codepen 以及 Dribbble。此外，填入 Disqus 的 shortname 也会启用 Disqus 评论。 `filter` 选项选择使用 `tag` 或 `category` 作为文章分类。
+`keywords` : 博客关键词(SEO相关)
 
-### 修改样式
+`baseurl` : 博客所在的目录文件夹，开头需带上`/`，如果为根目录请留空(建议将博客放置在根目录)
 
-样式相关的 Sass 变量都存储在 `/css/main.sass` 文件中，修改这个文件可以满足大部分样式定制的需求。建议首先修改 `$gradient-start` 与 `$gradient-end` 两个变量，给自己的博客使用独一无二的侧边栏背景。
+`url` : 你的域名，如`atlinker.cn`无需加`http/https://`
 
-### 替换图片
+`bulidtime` : 博客建立时的时间戳，填写后将自动计算博客建立时间并显示在页脚. [日期转时间戳](https://tool.lu/timestamp/)
 
-请不要忘记替换 `/assets/img/` 内的图片。`avatar.jpg` 是侧边栏头像的图片，`qrcode.jpg` 会在提示浏览器不兼容时使用。[QR Code 生成器](https://www.unitag.io/qrcode)
+`paginate` : 主页中显示的最大文章数，超过设定的数值文章自动归入下一页
+
+`background` : 博客首页主题图片路径
+
+`theme_color` : 博客顶部栏颜色，填颜色代码**但不要带上#号**
+
+`MathJax` : 是否开启MathJax(布尔值)
+
+`author` : 作者名
+
+> 开发者选项
+>> `PJAX` : PJAX无刷新加载(布尔值)
+
+## #设置域名
+
+修改根目录下的CNAME文件为你的域名即可
+
+#### 关于主题的基本设置已经完毕~
+
+---
+
+## #友链添加
+
+打开`_data`目录下的`friends.yml`文件，根据文件中模板新添代码即可
+
+---
+
+## #文章置顶
+
+在文章Front Matter添加stickie: true即可
+
+如：
+
+```
+ ---
+ layout: post
+ title: Hi
+ stickie: true
+ ---
+```
+
+## #评论
+
+#### #前提
+
+> 必须确定已阅读[Valine](https://valine.js.org/quickstart.html)文档
+
+配置文件:
+
+`_data/social.yml` : 填写app id和key以及评论的相关信息
+
+`_includes/comments.html` : 评论设置
+
+确保配置无误后修改`_data/social.yml`中的`enable`值由`false`改为`true`即可
+
+## #写在最后
+
+请花10分钟时间**认真**阅读文档，如还有疑难之处，请提[issues](https://github.com/link9596/hydrogen/issues/new)，我会尽力帮忙
+
+如使用过程有任何疑难Bug，也请提出[issues](https://github.com/link9596/hydrogen/issues/new)！ :+1:
+
+最后，如果喜欢~请给项目点个star:wink:(点star的dalao都超级靓的)
+
+![hydrogen](/theme/author.svg)
+
+![](https://img.shields.io/github/repo-size/link9596/hydrogen?color=%23F8BBD0)
+![](https://img.shields.io/github/release/link9596/hydrogen?color=%235C6BC0&label=Version)
