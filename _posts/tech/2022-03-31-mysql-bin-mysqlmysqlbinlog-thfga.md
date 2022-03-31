@@ -1,13 +1,11 @@
 ---
 layout: post
 title: mysql bin 恢复_MySQL数据库恢复(使用mysqlbinlog命令)
-category: mysql bin 恢复_MySQL数据库恢复(使用mysqlbinlog命令)
+category: MySQL
 keywords: 
-tags: 常识,MySQL
+tags: 常识 MySQL
 description: 
 ---
-
-> mysql bin 恢复_MySQL数据库恢复(使用mysqlbinlog命令)
 
 1：开启binlog日志记录修改mysql配置文件mysql.ini，在[mysqld]节点下添加
 
