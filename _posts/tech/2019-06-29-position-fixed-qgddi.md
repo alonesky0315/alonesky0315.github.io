@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Position: fixed;定位后不能滚动
+title: Position之fixed;定位后不能滚动
 category: HTML
 keywords: 
 tags: HTML
