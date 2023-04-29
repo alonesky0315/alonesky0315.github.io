@@ -9,7 +9,7 @@ description:
 
 GitHub Page 的（一种）输入是 markdown 文件，输出是 HTML/CSS/JS 文件。
 
-如果 markdown 文件包含代码块，且代码块中包含花括号 { 或 }，尤其是包含 {% 或 {{ 符号组合时，GitHub Page 会报错。
+如果 markdown 文件包含代码块，且代码块中包含花括号 { 或 }，尤其是包含 {% raw %} {% 或 {{ {% endraw %} 符号组合时，GitHub Page 会报错。
 
 分别在代码块前后添加 {% raw %} 和 {% endraw %} 即可解决该问题。
 
@@ -19,7 +19,7 @@ Jekyll 支持 Liquid - Safe, customer-facing template language 标记语言
 
 Liquid 的标记可分为三类
 
-objects，{{ ... }}
+objects，{% raw %}{{ ... }}{% endraw %}
 
 tags，{% ... %}
 
