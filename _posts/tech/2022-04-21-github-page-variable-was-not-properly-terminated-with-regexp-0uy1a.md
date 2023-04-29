@@ -9,9 +9,9 @@ description:
 
 GitHub Page 的（一种）输入是 markdown 文件，输出是 HTML/CSS/JS 文件。
 
-如果 markdown 文件包含代码块，且代码块中包含花括号 { 或 }，尤其是包含 {% raw %} {% 或 {{ {% endraw %} 符号组合时，GitHub Page 会报错。
+如果 markdown 文件包含代码块，且代码块中包含花括号 { 或 }，尤其是包含 {/\%\ 或 {{ 符号组合时，GitHub Page 会报错。
 
-分别在代码块前后添加 {% raw %} 和 {% endraw %} 即可解决该问题。
+分别在代码块前后添加 {/\%\ raw /\%\} 和 {/\%\ endraw /\%\} 即可解决该问题。
 
 GitHub Page 默认使用 Jekyll - Simple, blog-aware, static sites 来从 markdown 生成网页文件
 
@@ -19,16 +19,16 @@ Jekyll 支持 Liquid - Safe, customer-facing template language 标记语言
 
 Liquid 的标记可分为三类
 
-objects，{% raw %}{{ ... }}{% endraw %}
+objects，{{ ... }}
 
-tags，{% ... %}
+tags，{/\%\ ... /\%\}
 
 filters，{ ... | ...}
 
 假设一个开启了 GitHub Page 的项目，其README.md 文件包含如下几行
 
 ```latex
-\newcommand\abc{%
+\newcommand\abc{/\%\
   hello, abc.
 }
 ```
@@ -39,11 +39,11 @@ filters，{ ... | ...}
 
 同时，在 GitHub 的账号邮箱里，能收到构建失败的邮件，关键词是
 
-The tag `{%` on line 18 in `README.md` was not properly closed with `%}`.
+The tag `{/\%\` on line 18 in `README.md` was not properly closed with `/\%\}`.
 
 根据帮助链接的建议，我们在本地构建，能得到更为详细的错误信息。
 
-Liquid Exception: Liquid syntax error (line 18): Tag '{%' was not properly terminated with regexp: /\%\}/ in README.md
+Liquid Exception: Liquid syntax error (line 18): Tag '{/\%\' was not properly terminated with regexp: /\%\}/ in README.md
 
 搜索关键词，可以得到一些相似的问题求助
 
