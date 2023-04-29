@@ -43,7 +43,7 @@ The tag `{%` on line 18 in `README.md` was not properly closed with `%}`.
 
 根据帮助链接的建议，我们在本地构建，能得到更为详细的错误信息。
 
-Liquid Exception: Liquid syntax error (line 18): Tag '{%' was not properly terminated with regexp: /\%\}/ in README.md
+Liquid Exception: Liquid syntax error (line 18): Tag '{% raw %}{%{% endraw %}' was not properly terminated with regexp: /\%\}/ in README.md
 
 搜索关键词，可以得到一些相似的问题求助
 
