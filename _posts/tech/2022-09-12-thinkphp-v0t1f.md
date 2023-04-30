@@ -7,6 +7,8 @@ tags: 常识 PHP
 description: 
 ---
 
+ThinkPHP下载文件
+
 ```
 /**
  * 下载文件

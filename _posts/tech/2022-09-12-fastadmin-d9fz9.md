@@ -7,6 +7,8 @@ tags: 常识 PHP HTML JavaScript
 description: 
 ---
 
+FastAdmin生成压缩文件
+
 ```php
 public function download($ids = null){
     if (!$this->request->isPost()) {

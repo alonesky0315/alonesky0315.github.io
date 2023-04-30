@@ -7,6 +7,8 @@ tags: 常识 PHP
 description: 
 ---
 
+PHP AES加密
+
 ```
 <?php
 

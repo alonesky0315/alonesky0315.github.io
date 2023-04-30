@@ -7,6 +7,8 @@ tags: 常识
 description: 
 ---
 
+go mod download不能下载到go get golang.org/x 的包解决方案
+
 ```
 > make deps          
 go mod download
