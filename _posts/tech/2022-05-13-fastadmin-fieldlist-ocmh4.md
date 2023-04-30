@@ -7,8 +7,9 @@ tags: 常识 JavaScript HTML
 description: 
 ---
 
-html
-```
+Fastadmin fieldlist追加动态时间选择
+
+```html
 <div class="form-group">
     <label class="control-label col-xs-12 col-sm-2">{:__('Starttime')}:</label>
     <div class="col-xs-12 col-sm-8">
@@ -36,9 +37,7 @@ html
 
 ```
 
-js 
-
-```
+```js
 edit: function () {
     Controller.api.bindevent();
     $(document).on("fa.event.appendfieldlist", ".append", function(){
@@ -46,4 +45,5 @@ edit: function () {
     });
 },
 ```
+
 参考链接：[https://ask.fastadmin.net/question/12505.html](https://ask.fastadmin.net/question/12505.html)

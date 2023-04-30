@@ -8,6 +8,7 @@ description:
 ---
 
 1. 查询数据库所占空间
+
 ```
 SELECT
     concat(round(sum(data_length / 1024 / 1024),2),'MB') AS data_size
@@ -18,6 +19,7 @@ WHERE
 ```
 
 2. 查询表所占空间
+
 ```
 SELECT
     concat(round(sum(data_length / 1024 / 1024),2),'MB') AS data_size
@@ -28,6 +30,7 @@ WHERE
 ```
 
 3. 查询数据库所有表所占空间
+
 ```
 SELECT
     concat(round(sum(data_length / 1024 / 1024),2),'MB') AS data_size, table_name
@@ -40,7 +43,9 @@ GROUP BY
 ORDER BY
     data_size DESC;
 ```
+
 4. 查看所有数据库容量大小
+
 ```
 SELECT
     table_schema AS '数据库名称',
@@ -59,6 +64,7 @@ ORDER BY sum(data_length) DESC, sum(index_length) DESC;
 ```
 
 5. 查看所有数据库各表容量大小
+
 ```
 SELECT
     table_schema AS '数据库名称',
@@ -72,6 +78,7 @@ ORDER BY data_length DESC,index_length DESC;
 ```
 
 6. 查看指定数据库容量大小
+
 ```
 SELECT
     table_schema AS '数据库名称',
@@ -89,6 +96,7 @@ WHERE
 ```
 
 7. 查看指定数据库各表容量大小
+
 ```
 SELECT
     table_schema AS '数据库名称',
@@ -104,7 +112,9 @@ ORDER BY data_length DESC, index_length DESC;
 ```
 
 8. mysql数据库整理碎片方法：    
-1) 查看碎片方法    
+
+1) 查看碎片方法
+   
 ```
 SELECT table_schema db, table_name, data_free,engine
 FROM
@@ -117,7 +127,9 @@ WHERE
     )
 AND data_free > 0;
 ```
-2) 清除表碎片    
+
+1) 清除表碎片    
+
 ```    
 // InnoDB表 
 alter table tableName engine=InnoDB;
