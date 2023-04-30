@@ -7,6 +7,8 @@ tags: 常识 JavaScript
 description: 
 ---
 
+xm-select 基本使用
+
 ```
 // 页面
 <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
