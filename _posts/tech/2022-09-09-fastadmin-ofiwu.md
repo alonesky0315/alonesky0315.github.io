@@ -7,10 +7,14 @@ tags: 常识 JavaScript
 description: 
 ---
 
+fastadmin 列长度限制
+
+1. 在每个js中添加
+
 ```
 {
-    field: 'category_name',
-    title: __('关联行业类目'),
+    field: 'title',
+    title: __('标题'),
     cellStyle: {
         css: {
             "max-width": "300px",
@@ -32,6 +36,30 @@ api: {
             return span.outerHTML;
         },
     }
+}
+```
+
+2. 在 require-table.js中修改content
+
+```
+{
+    field: 'title',
+    title: __('标题'),
+    operate: 'LIKE',
+    formatter: Table.api.formatter.content
+},
+
+api: {
+    ...
+    formatter: {
+        ...
+        content: function (value, row, index) {
+            var width = this.width != undefined ? (this.width.match(/^\d+$/) ? this.width + "px" : this.width) : "250px";
+            return "<div title='" + value + "' style='white-space: nowrap; text-overflow:ellipsis; overflow: hidden; max-width:" + width + ";'>" + value + "</div>";
+        },
+        ...
+    }
+    ...
 }
 ```
 
