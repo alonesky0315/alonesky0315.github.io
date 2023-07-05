@@ -28,7 +28,7 @@ filters，{ ... | ...}
 假设一个开启了 GitHub Page 的项目，其README.md 文件包含如下几行
 
 ```latex
-\newcommand\abc{%
+\newcommand\abc{/\%\
   hello, abc.
 }
 ```
@@ -55,9 +55,9 @@ Ignore a specific tag in Jekyll
 这些信息，指向同一个解决方案：加 Liquid raw tag
 
 ```latex
-{% raw %}\newcommand\abc{%
+\newcommand\abc{/\%\
   hello, abc.
-}{% endraw %}
+}
 ```
 
 结合本文开头提供的背景知识，错误的来源是，Jekyll 在构建网站时，将 LaTeX 代码片段中的 `{%` 符号组合识别为 Liquid tag 的起始部分。从列出的前两条问题求助中可以了解到，连续两个左侧花括号，也会带来构建错误。
