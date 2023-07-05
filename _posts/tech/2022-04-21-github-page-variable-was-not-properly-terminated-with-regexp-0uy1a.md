@@ -30,7 +30,7 @@ filters，{ ... | ...}
 ```latex
 \newcommand\abc{/\%\
   hello, abc.
-}
+/\%\}
 ```
 
 这几行，在网站构建时会产生错误。在项目的设置页面，我们能看到类似这样的报错信息
@@ -57,7 +57,7 @@ Ignore a specific tag in Jekyll
 ```latex
 \newcommand\abc{/\%\
   hello, abc.
-}
+/\%\}
 ```
 
 结合本文开头提供的背景知识，错误的来源是，Jekyll 在构建网站时，将 LaTeX 代码片段中的 `{%` 符号组合识别为 Liquid tag 的起始部分。从列出的前两条问题求助中可以了解到，连续两个左侧花括号，也会带来构建错误。
