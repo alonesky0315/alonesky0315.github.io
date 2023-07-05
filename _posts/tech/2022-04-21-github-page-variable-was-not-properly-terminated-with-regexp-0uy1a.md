@@ -9,9 +9,9 @@ description:
 
 GitHub Page 的（一种）输入是 markdown 文件，输出是 HTML/CSS/JS 文件。
 
-如果 markdown 文件包含代码块，且代码块中包含花括号 { 或 }，尤其是包含 {% 或 {{ 符号组合时，GitHub Page 会报错。
+如果 markdown 文件包含代码块，且代码块中包含花括号 { 或 }，尤其是包含 `{% 或 {{` 符号组合时，GitHub Page 会报错。
 
-分别在代码块前后添加 {% raw %} 和 {% endraw %} 即可解决该问题。
+分别在代码块前后添加 `{% raw %}` 和 `{% endraw %}` 即可解决该问题。
 
 GitHub Page 默认使用 Jekyll - Simple, blog-aware, static sites 来从 markdown 生成网页文件
 
@@ -19,11 +19,11 @@ Jekyll 支持 Liquid - Safe, customer-facing template language 标记语言
 
 Liquid 的标记可分为三类
 
-objects，{{ ... }}
+objects，`{{ ... }}`
 
-tags，{% ... %}
+tags，`{% ... %}`
 
-filters，{ ... | ...}
+filters，`{ ... | ...}`
 
 假设一个开启了 GitHub Page 的项目，其README.md 文件包含如下几行
 
@@ -43,7 +43,9 @@ The tag `{%` on line 18 in `README.md` was not properly closed with `%}`.
 
 根据帮助链接的建议，我们在本地构建，能得到更为详细的错误信息。
 
+```
 Liquid Exception: Liquid syntax error (line 18): Tag '{%' was not properly terminated with regexp: /\%\}/ in README.md
+```
 
 搜索关键词，可以得到一些相似的问题求助
 
@@ -58,7 +60,7 @@ Ignore a specific tag in Jekyll
 }{% endraw %}
 ```
 
-结合本文开头提供的背景知识，错误的来源是，Jekyll 在构建网站时，将 LaTeX 代码片段中的 {% 符号组合识别为 Liquid tag 的起始部分。从列出的前两条问题求助中可以了解到，连续两个左侧花括号，也会带来构建错误。
+结合本文开头提供的背景知识，错误的来源是，Jekyll 在构建网站时，将 LaTeX 代码片段中的 `{%` 符号组合识别为 Liquid tag 的起始部分。从列出的前两条问题求助中可以了解到，连续两个左侧花括号，也会带来构建错误。
 
 不只是 LaTeX，只要 .md 文件中出现了与 Liquid 代码的三类标记相同的字符组合，这个问题就会触发。
 
