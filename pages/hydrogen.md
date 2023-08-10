@@ -1,3 +1,12 @@
+---
+layout: page
+title: 框架简介
+tagline: 框架简介
+sitetime: display
+permalink: /hydrogen.html
+---
+
+
 # Hydrogen
 Lightweight and clean
 
