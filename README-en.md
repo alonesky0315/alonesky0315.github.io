@@ -5,7 +5,7 @@ Follow her footsteps and start your blog journey.
 
 [Demo](https://atlinker.cn)
 
-Language：[Chinese](README-zh.md) | English
+Language：[简体中文](README-zh.md) | English
 
 ![hydrogen](/theme/logo-h.svg)
 
