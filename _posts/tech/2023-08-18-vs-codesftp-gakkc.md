@@ -26,6 +26,8 @@ sftp插件是在文件夹下生效的, 因为你要在文件夹下进行sftp的�
     "password": "root",
     "remotePath": "/site",
     "uploadOnSave": false,
+    "useTempFile": false,
+    "openSsh": false,
     "downloadOnOpen": false,
     "watcher": {
         "files": "**/*",
@@ -33,10 +35,11 @@ sftp插件是在文件夹下生效的, 因为你要在文件夹下进行sftp的�
         "autoDelete": true
     },
     "ignore": [
-        "node_modules",
-        ".vscode",
         ".git",
-        ".DS_Store"
+        ".idea",
+        ".vscode",
+        ".DS_Store",
+        "node_modules"
     ]
 }
 ``` 
