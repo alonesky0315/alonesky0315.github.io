@@ -8,6 +8,7 @@ description:
 ---
 
 ####  DcatAdmin 更换wangEditor编辑器
+
 1. 安装
 ```
 composer require death_satan/dcat-wang-editor -vvv
